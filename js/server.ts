@@ -1,8 +1,11 @@
 // Use Resend to send Emails
-
+//import EMAIL_API_KEY from env;
 import { Resend } from 'resend';
 
-const resend = new Resend('re_123456789');
+var env = require('dotenv')
+
+
+const resend = new Resend(env.EMAIL_API_KEY);
 
 (async function () {
     const { data, error } = await resend.emails.send({
