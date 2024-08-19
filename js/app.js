@@ -38,9 +38,6 @@ function iniciarApp() {
 
 // Valida el formulario
 function validarFormulario(e) {
-
-
-    
     if(e.target.value.length > 0 ) {
 
         // Elimina los errores...
@@ -74,7 +71,6 @@ function validarFormulario(e) {
             mostrarError('Email no válido');
         }
     }
-
 
     if( er.test( email.value ) && asunto.value !== '' && mensaje.value !== '') {
         btnEnviar.disabled = false;
@@ -131,3 +127,4 @@ function resetearFormulario() {
 
     iniciarApp();
 }
+
